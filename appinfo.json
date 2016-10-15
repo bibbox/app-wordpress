@@ -1,0 +1,9 @@
+{
+		"name": "Wordpress xx",
+		"short_name": "Wordpress",
+		"version": "vx,x",
+		"description": "Wordpress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL",
+		"catalogue_url": "",
+		"application_url": "https://wordpress.org",
+		"tags": ["Content Management System", "Blog"]
+}

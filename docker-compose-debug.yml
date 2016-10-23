@@ -36,4 +36,4 @@ services:
     container_name: wordpress-data-debug
     volumes:
       - /Users/mue/dockerdata/wordpress/var/lib/mysql:/var/lib/mysql
-      
+      8090

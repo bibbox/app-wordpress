@@ -1,25 +1,25 @@
 version: '2'
 services:
 
-  wordpress-§§INSTANCE:
+  §§INSTANCE-wordpress:
     image: wordpress:latest
-    container_name:  wordpress-§§INSTANCE
+    container_name:  §§INSTANCE-wordpress
     links:
-      - wordpress-db-§§INSTANCE::wordpress-db-§§INSTANCE
+      - §§INSTANCE-wordpress-db::§§INSTANCE-wordpress-db
     ports:
       - "8098:8080"
     depends_on:
-      - wordpress-db-§§INSTANCE
-      - wordpress-data-§§INSTANCE
+      - §§INSTANCE-wordpress-db
+      - §§INSTANCE-wordpress-data
     volumes_from: 
-      - wordpress-data-§§INSTANCE
+      - §§INSTANCE-wordpress-data
      environment: 
-       WORDPRESS_DB_HOST: wordpress-db-§§INSTANCE:3306
+       WORDPRESS_DB_HOST: §§INSTANCE-wordpress-db:3306
        WORDPRESS_DB_PASSWORD: §§MYSQL_PASSWORD
 
-  wordpress-db-§§INSTANCE:
+  §§INSTANCE-wordpress-db:
     image: mysql
-    container_name: wordpress-db-§§INSTANCE
+    container_name: §§INSTANCE-wordpress-db
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
@@ -27,13 +27,13 @@ services:
       - MYSQL_USER=§§MYSQL_USER
       - MYSQL_PASSWORD=§§MYSQL_PASSWORD
     volumes_from: 
-      - wordpress-data-§§INSTANCE
+      - §§INSTANCE-wordpress-data
     depends_on:
-      - wordpress-data-§§INSTANCE
+      - §§INSTANCE-wordpress-data
 
-  wordpress-data-§§INSTANCE:
+  §§INSTANCE-wordpress-data:
     image: busybox
-    container_name: wordpress-data-§§INSTANCE
+    container_name: §§INSTANCE-wordpress-data
     volumes:
       - §§FOLDER/var/lib/mysql:/var/lib/mysql
       

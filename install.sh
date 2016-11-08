@@ -21,7 +21,7 @@ error_exit()
 }
 
  #ADD CUSTOM CHECKS AN LOSs as YOU LIKE
- checkParameters() 
+checkParametersAndWriteLog() 
 {
     echo "Setup parameters:"
     if [[ -z "$MYSQL_ROOT_PASSWORD" ]]; then

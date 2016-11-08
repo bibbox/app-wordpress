@@ -21,8 +21,11 @@ error_exit()
 }
 
  #ADD CUSTOM CHECKS AN LOSs as YOU LIKE
+ checkParameters() 
+{
+    echo "Setup parameters:"
     if [[ -z "$MYSQL_ROOT_PASSWORD" ]]; then
-        error_exit "The my sql root password is not set."
+        error_exit "The mysql root password is not set."
     else
         echo "MYSQL root passwort: ****"
     fi  

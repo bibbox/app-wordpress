@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE-wordpress", "§§INSTANCE-wordpress-db"],
-  supportcontainers:["§§INSTANCE-wordpress-data"]    
+  runningcontainers:["-wordpress", "-wordpress-db"],
+  supportcontainers:["-wordpress-data"]    
 }

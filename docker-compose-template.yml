@@ -7,7 +7,7 @@ services:
     links:
       - §§INSTANCE-wordpress-db:§§INSTANCE-wordpress-db
     ports:
-      - "8098:8080"
+      - "8098:80"
     depends_on:
       - §§INSTANCE-wordpress-db
       - §§INSTANCE-wordpress-data

@@ -11,11 +11,11 @@ services:
     depends_on:
       - §§INSTANCE-wordpress-db
       - §§INSTANCE-wordpress-data
+    entrypoint: ./wait-for-it.sh §§INSTANCE-wordpress-db:3306        
     volumes_from: 
       - §§INSTANCE-wordpress-data
     environment: 
          WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
-    entrypoint: ./wait-for-it.sh §§INSTANCE-wordpress-db:3306        
          
          
 

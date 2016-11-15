@@ -13,7 +13,7 @@ services:
       - §§INSTANCE-wordpress-data
     volumes_from: 
       - §§INSTANCE-wordpress-data
-     environment: 
+    environment: 
        WORDPRESS_DB_HOST: §§INSTANCE-wordpress-db:3306
        WORDPRESS_DB_PASSWORD: §§MYSQL_PASSWORD
 

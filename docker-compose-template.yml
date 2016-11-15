@@ -34,3 +34,5 @@ services:
     volumes:
       - §§FOLDER/var/lib/mysql:/var/lib/mysql
       
+      
+      

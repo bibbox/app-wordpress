@@ -15,6 +15,9 @@ services:
       - §§INSTANCE-wordpress-data
     environment: 
          WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
+    entrypoint: ./wait-for-it.sh §§INSTANCE-wordpress-db:3306        
+         
+         
 
   §§INSTANCE-wordpress-db:
     image: mysql

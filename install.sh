@@ -73,6 +73,8 @@ createFolders()
         echo "Creating Installation Folder"
         mkdir -p "$folder/var/lib/mysql"
     fi
+
+    
 }
 
 #

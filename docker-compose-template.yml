@@ -15,7 +15,9 @@ services:
       - §§INSTANCE-wordpress-data
     environment: 
        WORDPRESS_DB_HOST: §§INSTANCE-wordpress-db:3306
-       WORDPRESS_DB_PASSWORD: §§MYSQL_PASSWORD
+       WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
+       WORDPRESS_DB_NAME: §§MYSQL_DATABASE
+       WORDPRESS_DB_USER: §§MYSQL_USER
 
   §§INSTANCE-wordpress-db:
     image: mysql

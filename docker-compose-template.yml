@@ -4,6 +4,7 @@ services:
   §§INSTANCE-wordpress:
     image: wordpress:latest
     container_name:  §§INSTANCE-wordpress
+    restart: unless-stopped
     links:
       - §§INSTANCE-wordpress-db:mysql
     ports:

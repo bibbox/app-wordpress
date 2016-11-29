@@ -10,7 +10,7 @@
 }, {
 	"id": "MYSQL_DATABASE",
 	"display_name": "mySQL database name",
-	"description": "mySQL database name for phenotips",
+	"description": "mySQL database name for Wordpress",
 	"default_value": "wordpress",
 	"type": "STRING",
 	"visible": "YES",
@@ -19,7 +19,7 @@
 }, {
 	"id": "MYSQL_USER",
 	"display_name": "mySQL user",
-	"description": "name of mySQL user for the phenotips DB",
+	"description": "name of mySQL user for the Wordpress DB",
 	"default_value": "wordpress",
 	"type": "STRING",
 	"visible": "YES",

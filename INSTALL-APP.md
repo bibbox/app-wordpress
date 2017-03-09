@@ -5,7 +5,7 @@
 * Choose your language
 ![Screenshot01](install-screen-01.png)
 
-* Define your Blog/Webpage title, your username and password and your e-mail adress. 
+* Define your Blog/Webpage title, your username and password and your e-mail address. 
 ![Screenshot02](install-screen-02.png)
 
 * In the dashboard you can configure wordpress, and finaly create your sites and posts. Just watch this short video, if you are new to wordpress: https://youtu.be/uwan-ofPGqQ

@@ -46,7 +46,7 @@ services:
     image: busybox
     container_name: §§INSTANCE-wordpress-data
     volumes:
-      - §§FOLDER/var/lib/mysql:/var/lib/mysql
+      - ./var/lib/mysql:/var/lib/mysql
       
       
       

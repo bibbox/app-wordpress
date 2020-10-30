@@ -28,7 +28,7 @@ services:
       - WP_ALLOW_MULTISITE=true
       - MULTISITE=true
       - SUBDOMAIN_INSTALL=true
-      - DOMAIN_CURRENT_SITE=http.//localhost:8010
+      - DOMAIN_CURRENT_SITE=http://localhost:8010
       - PATH_CURRENT_SITE=/
       - SITE_ID_CURRENT_SITE=1
       - BLOG_ID_CURRENT_SITE=1

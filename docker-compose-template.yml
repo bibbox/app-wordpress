@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
   
 networks:
     bibbox-default-network:
@@ -15,12 +15,11 @@ services:
     links:
       - §§INSTANCE-wordpress-db:mysql
     ports:
-      - "§§PORT:80"
+      - "80"
     depends_on:
       - §§INSTANCE-wordpress-db
       - §§INSTANCE-wordpress-data
-    volumes_from: 
-      - §§INSTANCE-wordpress-data
+      
     environment: 
      WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
      WORDPRESS_DB_HOST: mysql:3306
@@ -36,16 +35,10 @@ services:
     user: root
     environment:
          MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD
-    volumes_from: 
-      - §§INSTANCE-wordpress-data
+    volumes: 
+      - ./var/lib/mysql:/var/lib/mysql
     depends_on:
       - §§INSTANCE-wordpress-data
 
-  §§INSTANCE-wordpress-data:
-    image: busybox
-    container_name: §§INSTANCE-wordpress-data
-    volumes:
-      - ./var/lib/mysql:/var/lib/mysql
-      
       
       

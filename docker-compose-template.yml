@@ -17,9 +17,7 @@ services:
     ports:
       - "80"
     depends_on:
-      - §§INSTANCE-wordpress-db
-      - §§INSTANCE-wordpress-data
-      
+      - §§INSTANCE-wordpress-db      
     environment: 
      WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
      WORDPRESS_DB_HOST: mysql:3306
@@ -37,8 +35,5 @@ services:
          MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD
     volumes: 
       - ./var/lib/mysql:/var/lib/mysql
-    depends_on:
-      - §§INSTANCE-wordpress-data
-
       
       

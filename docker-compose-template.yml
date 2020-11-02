@@ -23,8 +23,8 @@ services:
       - WORDPRESS_DB_HOST=mysql
       - WORDPRESS_DB_USER=root
       - WORDPRESS_DB_NAME=wordpress
-    volumes:
-      - ./config:/var/www/html
+  #  volumes:
+  #    - ./config:/var/www/html
 
               
   §§INSTANCE-wordpress-db:

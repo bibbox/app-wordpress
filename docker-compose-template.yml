@@ -34,6 +34,9 @@ services:
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
+#      - MYSQL_DATABASE=owncloud
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=§§MYSQL_ROOT_PASSWORD
     volumes: 
       - ./var/lib/mysql:/var/lib/mysql
       

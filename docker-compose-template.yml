@@ -34,7 +34,7 @@ services:
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=§§MYSQL_ROOT_PASSWORD
-#      - MYSQL_DATABASE=owncloud
+      - MYSQL_DATABASE=wordpress
       - MYSQL_USER=root
       - MYSQL_PASSWORD=§§MYSQL_ROOT_PASSWORD
     volumes: 

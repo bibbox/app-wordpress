@@ -1,0 +1,48 @@
+version: '3.8'
+  
+services:
+
+  bibbox-wordpress:
+    image: wordpress:latest
+    container_name:  bibbox-wordpress
+    restart: unless-stopped
+    links:
+      - bibbox-wordpress-db:wordpress-db
+    ports:
+      - "8010:80"
+    depends_on:
+      - bibbox-wordpress-db
+    environment: 
+      WORDPRESS_DB_PASSWORD: changemeplease
+      WORDPRESS_DB_HOST: wordpress-db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_NAME: wordpress
+   
+   bibbox-wordpress-db:
+    image: mariadb:10.1.21
+    container_name: bibbox-wordpress-db
+    restart: unless-stopped
+    user: root
+    environment:
+         MYSQL_ROOT_PASSWORD: §changemeplease
+    volumes: 
+      - ./data/mysql:/var/lib/mysql
+       
+   bibbox-wordpress-adminer:
+    image: adminer
+    container_name: bibbox-wordpress-adminer
+    links:
+      - bibbox-wordpress-db:wordpress-db
+    restart: unless-stopped
+    ports:
+      - "8020:8080"
+    environment:
+      ADMINER_DEFAULT_DB_DRIVER: mysql
+      ADMINER_DEFAULT_DB_HOST:   wordpress-db
+      ADMINER_DEFAULT_DB_NAME:   wordpress
+
+
+ 
+      
+      
+      

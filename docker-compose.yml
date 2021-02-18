@@ -9,13 +9,13 @@ services:
     links:
       - bibbox-wordpress-db:wordpress-db
     ports:
-      - "8010:80"
+      - "8011:80"
     depends_on:
       - bibbox-wordpress-db
     environment: 
         WORDPRESS_DB_PASSWORD: changemeplease
         WORDPRESS_DB_HOST: wordpress-db:3306
-        WORDPRESS_DB_USER: wordpress
+        WORDPRESS_DB_USER: root
         WORDPRESS_DB_NAME: wordpress
    
   bibbox-wordpress-db:
@@ -24,7 +24,6 @@ services:
     restart: unless-stopped
     environment:
         MYSQL_ROOT_PASSWORD: changemeplease
-        MYSQL_PASSWORD: changemeplease
     volumes: 
       - ./data/mysql:/var/lib/mysql
        

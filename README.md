@@ -7,8 +7,8 @@
 
 ## Docker Images Used
  * [wordpress](https://hub.docker.com/_/wordpress/), official wordpress container
- * [mySQL](https://hub.docker.com/_/mysql/), offical mySQL container
- * [busybox](https://hub.docker.com/_/busybox/), offical data container
+ * [mariadb](https://hub.docker.com/_/mariadb/), offical mySQL container
+ * [adminer](https://hub.docker.com/_/adminer/), db management tool
  
 ## Install Environment Variables
   *	MYSQL_ROOT_PASSWORD = password, only used within the docker container

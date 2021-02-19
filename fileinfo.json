@@ -14,7 +14,7 @@
   },
   {
     "source":"assets/install-screen-02.png",
-    "destination":"dbs/mysql"
+    "destination":"dbs/mysql/assets/install-screen-02.png"
   },
   {
     "source":"https://raw.githubusercontent.com/bibbox/app-wordpress/V4/assets/install-screen-03.png",

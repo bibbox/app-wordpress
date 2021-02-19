@@ -1,6 +1,7 @@
 {
   "makefolders":[
-    "dbs/mysql"
+    "dbs/mysql", 
+    "assets"
   ],
   "copyfiles":[
     {
@@ -13,7 +14,7 @@
   },
   {
     "source":"assets/install-screen-02.png",
-    "destination":"var/lib/"
+    "destination":"dbs/mysql"
   },
   {
     "source":"https://raw.githubusercontent.com/bibbox/app-wordpress/V4/assets/install-screen-03.png",

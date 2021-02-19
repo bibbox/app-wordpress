@@ -1,5 +1,5 @@
 version: '3.8'
-  
+
 networks:
     bibbox-default-network:
       external: true
@@ -14,7 +14,7 @@ services:
       - bibbox-default-network
     links:
       - §§INSTANCE-wordpress-db:wordpress-db
-    proxy:  
+    proxy:
       - type: PRIMARY
       - urlprefix:  §§INSTANCE
       - template: default
@@ -23,13 +23,13 @@ services:
       - "8010:80"
     depends_on:
       - §§INSTANCE-wordpress-db
-    environment: 
+    environment:
       WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
       WORDPRESS_DB_HOST: wordpress-db:3306
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_NAME: wordpress
-   
-   §§INSTANCE-wordpress-db:
+
+  §§INSTANCE-wordpress-db:
     image: mariadb:10.1.21
     container_name: §§INSTANCE-wordpress-db
     restart: unless-stopped
@@ -38,10 +38,10 @@ services:
     user: root
     environment:
          MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD
-    volumes: 
+    volumes:
       - §§DATAROOT/§§INSTANCE/dbs/mysql:/var/lib/mysql
-       
-   §§INSTANCE-wordpress-adminer:
+
+  §§INSTANCE-wordpress-adminer:
     image: adminer
     container_name: §§INSTANCE-wordpress-adminer
     links:
@@ -49,20 +49,14 @@ services:
     restart: unless-stopped
     networks:
       - bibbox-default-network
-    proxy:  
+    proxy:
       - type: HELPER
       - urlprefix:  §§INSTANCE.adminer
       - template:   default
-      - displayname: 'Adminer'  
+      - displayname: 'Adminer'
     ports:
       - "8020:8080"
     environment:
       ADMINER_DEFAULT_DB_DRIVER: mysql
       ADMINER_DEFAULT_DB_HOST:   wordpress-db
       ADMINER_DEFAULT_DB_NAME:   wordpress
-
-
- 
-      
-      
-      

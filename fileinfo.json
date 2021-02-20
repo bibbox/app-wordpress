@@ -1,6 +1,6 @@
 {
   "makefolders":[ 
-    "dbs/mysql", 
+    "database/mysql", 
     "assets"
   ],
   "copyfiles":[

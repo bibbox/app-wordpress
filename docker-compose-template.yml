@@ -1,4 +1,4 @@
-version: '3.8'
+ersion: '2.1'
 
 networks:
     bibbox-default-network:
@@ -22,7 +22,8 @@ services:
     ports:
       - "8010:80"
     depends_on:
-      - §§INSTANCE-wordpress-db
+       §§INSTANCE-wordpress-db:
+         condition: service_healthy
     environment:
       WORDPRESS_DB_PASSWORD: §§MYSQL_ROOT_PASSWORD
       WORDPRESS_DB_HOST: wordpress-db:3306
@@ -38,6 +39,8 @@ services:
     user: root
     environment:
          MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD
+    healthcheck:
+      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p §§MYSQL_ROOT_PASSWORD' ]      
     volumes:
       - ./database/mysql:/var/lib/mysql
 

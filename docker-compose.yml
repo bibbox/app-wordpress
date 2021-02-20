@@ -1,4 +1,4 @@
-version: '3.8'
+version: '2.1'
   
 services:
 
@@ -11,7 +11,8 @@ services:
     ports:
       - "8011:80"
     depends_on:
-      - bibbox-wordpress-db
+       bibbox-wordpress-db:
+         condition: service_healthy
     environment: 
         WORDPRESS_DB_PASSWORD: changemeplease
         WORDPRESS_DB_HOST: wordpress-db:3306
@@ -24,6 +25,9 @@ services:
     restart: unless-stopped
     environment:
         MYSQL_ROOT_PASSWORD: changemeplease
+    healthcheck:
+      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p changemeplease' ]      
+    
     volumes: 
       - ./data/mysql:/var/lib/mysql
        

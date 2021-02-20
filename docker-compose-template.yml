@@ -39,7 +39,7 @@ services:
     environment:
          MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD
     volumes:
-      - §§DATAROOT/§§INSTANCE/dbs/mysql:/var/lib/mysql
+      - ./database/mysql:/var/lib/mysql
 
   §§INSTANCE-wordpress-adminer:
     image: adminer

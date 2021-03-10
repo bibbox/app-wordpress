@@ -15,10 +15,10 @@ services:
     links:
       - §§INSTANCE-wordpress-db:wordpress-db
     proxy:
-      - type: PRIMARY
-      - urlprefix:  §§INSTANCE
-      - template: default
-      - displayname:'Wordpress'
+     TYPE: PRIMARY
+     URLPREFIX:  §§INSTANCE
+     TEMPLATE: default
+     DISPLAYNAME: 'Wordpress'
     ports:
       - "8010:80"
     depends_on:
@@ -53,11 +53,12 @@ services:
     networks:
       - bibbox-default-network
     proxy:
-      - type: HELPER
-      - urlprefix:  §§INSTANCE.adminer
-      - template:   default
-      - displayname: 'Adminer'
-    ports:
+     TYPE: HELPER
+     URLPREFIX:  §§INSTANCE.adminer
+     TEMPLATE: default
+     DISPLAYNAME: 'Adminer'
+
+ports:
       - "8020:8080"
     environment:
       ADMINER_DEFAULT_DB_DRIVER: mysql

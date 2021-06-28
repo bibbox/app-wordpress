@@ -1,5 +1,25 @@
 [
 	{
+        "id": "MYSQL_USER",
+        "display_name": "mySQL username",
+        "description": "username for the mysql-db account",
+        "default_value": "user",
+        "type": "TEXT",
+        "visible": "YES",
+        "min_length": "1",
+        "max_length": "128"
+        },
+        {
+        "id": "MYSQL_PASSWORD",
+        "display_name": "mySQL password",
+        "description": "password of the mySQL database, only visible within the container, can be a short, medium secure password",
+        "default_value": "user_pass",
+        "type": "PASSWORD",
+        "visible": "YES",
+        "min_length": "1",
+        "max_length": "128"
+        },
+	{
 	"id": "MYSQL_ROOT_PASSWORD",
 	"display_name": "mySQL root password",
 	"description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
@@ -8,5 +28,5 @@
 	"visible": "YES",
 	"min_length": "1",
 	"max_length": "128"
-   }
+   	},
 ]

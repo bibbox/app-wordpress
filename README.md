@@ -39,6 +39,3 @@
 Have a nice ride with the Admins youngtimer.
 
 ![FINAL](install-screen-final.jpg)
-
-## Test if zip takes cached
-test2

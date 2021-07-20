@@ -39,7 +39,7 @@ services:
      TEMPLATE: default
      DISPLAYNAME: 'WordpressDB'
     ports:
-      - "8010:80"
+      - "8070:80"
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: §§MYSQL_ROOT_PASSWORD

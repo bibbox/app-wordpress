@@ -2,6 +2,7 @@
 	"environment_replace": {},
 	"script_replace": [],
 	"permissions": {
-		"assets": 775
+		"assets": 775,
+		"not_found.txt": 644
 	}
 }

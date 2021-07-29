@@ -4,10 +4,10 @@
 * approx. time with medium fast internet connection: **5 minutes**
 * initial user/passwordd: set at installation
 * adminer static credentials:
-| field | value |
-| ------ | ------ | 
-| server | wordpress-db |
-| database | wordpress |
+field | value
+------ | ------ 
+server | wordpress-db
+database | wordpress
 
 ## Docker Images Used
  * [wordpress](https://hub.docker.com/_/wordpress/), official wordpress container

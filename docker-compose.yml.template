@@ -43,6 +43,8 @@ services:
 
   §§INSTANCE-wordpress-adminer:
     image: adminer
+    networks:
+      - bibbox-default-network
     container_name: §§INSTANCE-wordpress-adminer
     links:
       - §§INSTANCE-wordpress-db:wordpress-db
@@ -50,10 +52,10 @@ services:
     ports:
       - "8020:8080"
     proxy:
-     TYPE: HELPER
-     URLPREFIX:  §§INSTANCE-adminer
-     TEMPLATE: default
-     DISPLAYNAME: 'Adminer'
+      TYPE: HELPER
+      URLPREFIX:  §§INSTANCE-adminer
+      TEMPLATE: default
+      DISPLAYNAME: 'Adminer'
     environment:
       ADMINER_DEFAULT_DB_DRIVER: mysql
       ADMINER_DEFAULT_DB_HOST:   wordpress-db

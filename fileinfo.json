@@ -1,9 +1,8 @@
 {
-	"environment_replace": [],
+	"environment_replace": {},
 	"script_replace": [],
-	"permissions": [
-	  {
-		 "assets": "775"
-	  }
-	]
+	"permissions": {
+		"assets": "775",
+		"testfolder" : "755"
+	}
 }

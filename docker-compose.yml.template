@@ -49,6 +49,11 @@ services:
     restart: unless-stopped
     ports:
       - "8020:8080"
+    proxy:
+     TYPE: HELPER
+     URLPREFIX:  §§INSTANCE-adminer
+     TEMPLATE: default
+     DISPLAYNAME: 'Adminer'
     environment:
       ADMINER_DEFAULT_DB_DRIVER: mysql
       ADMINER_DEFAULT_DB_HOST:   wordpress-db

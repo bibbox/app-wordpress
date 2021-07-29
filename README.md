@@ -3,7 +3,9 @@
 ## Hints
 * approx. time with medium fast internet connection: **5 minutes**
 * initial user/passwordd: set at installation
-* adminer static credentials:
+
+
+adminer static credentials:
 field | value
 ------ | ------ 
 server | wordpress-db

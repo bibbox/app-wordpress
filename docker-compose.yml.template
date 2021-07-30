@@ -12,8 +12,8 @@ services:
     restart: unless-stopped
     networks:
       - bibbox-default-network
-    # links: # deprecated, implicit if in same network
-    #   - §§INSTANCE-wordpress-db:wordpress-db
+    links:
+      - §§INSTANCE-wordpress-db:wordpress-db
     proxy:
      TYPE: PRIMARY
      URLPREFIX:  §§INSTANCE

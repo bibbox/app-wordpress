@@ -1,0 +1,38 @@
+version: '3'
+services:
+  local-wordpress:
+    container_name: local-wordpress
+    environment:
+      WORDPRESS_DB_HOST: wordpress-db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_USER: user
+    image: wordpress:latest
+    links:
+    - local-wordpress-db:wordpress-db
+    ports:
+    - 8010:80
+    restart: unless-stopped
+  local-wordpress-adminer:
+    container_name: local-wordpress-adminer
+    environment:
+      ADMINER_DEFAULT_DB_DRIVER: mysql
+      ADMINER_DEFAULT_DB_HOST: wordpress-db
+      ADMINER_DEFAULT_DB_NAME: wordpress
+    image: adminer
+    links:
+    - local-wordpress-db:wordpress-db
+    ports:
+    - 8020:8080
+    restart: unless-stopped
+  local-wordpress-db:
+    container_name: local-wordpress-db
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+    image: mariadb:10.1.21
+    restart: unless-stopped
+    volumes:
+    - ./database/mysql:/var/lib/mysql

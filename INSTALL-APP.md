@@ -1,6 +1,6 @@
-## APP-WORDPRESS Installation Instructions 
+# APP-WORDPRESS Installation Instructions 
 
-*## Installation Instructions 
+## Installation Instructions 
 
 * Choose your language
 ![Screenshot01](assets/install-screen-01.png)

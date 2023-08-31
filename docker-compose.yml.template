@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-wordpress:
-    image: wordpress:php7.4
+    image: wordpress:php8.2
     container_name:  §§INSTANCE-wordpress
     restart: unless-stopped
     networks:

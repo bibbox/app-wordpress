@@ -12,8 +12,8 @@
     {
         "id": "MYSQL_PASSWORD",
         "display_name": "mySQL password",
-        "description": "password of the mySQL database, only visible within the container, can be a short, medium secure password",
-        "default_value": "user_pass",
+        "description": "Password of the mySQL database, only visible within the container",
+        "default_value": "changethispasswordinproductionenvironments",
         "type": "PASSWORD",
         "visible": "YES",
         "min_length": "1",
@@ -22,8 +22,8 @@
     {
         "id": "MYSQL_ROOT_PASSWORD",
         "display_name": "mySQL root password",
-        "description": "root password of the mySQL database, only visible within the container, can be a short, medium secure password",
-        "default_value": "",
+        "description": "Root password of the mySQL database, only visible within the container",
+        "default_value": "changethisrootpasswordinproductionenvironments",
         "type": "PASSWORD",
         "visible": "YES",
         "min_length": "1",

@@ -1,44 +1,47 @@
-# WORDPRESS BIBBOX application
+# wordpress BIBBOX application
 
-WORDPRESS can be installed as [BIBBOX APP](https://bibbox.readthedocs.io/en/latest/ "BIBBOX App Store") or standalone. 
+This container can be installed as [BIBBOX APP](https://bibbox.readthedocs.io/en/latest/ "BIBBOX App Store") or standalone. 
 
-## Hints
-* approx. time with medium fast internet connection: **5 minutes**
-* initial user/passwordd: set at installation
-* After the installation follow these [instructions](INSTALL-APP.md)
+- after the docker installation follow these [instructions](INSTALL-APP.md)
 
-adminer static credentials:
-field | value
------- | ------ 
-server | wordpress-db
-database | wordpress
+## Standalone Installation 
 
-
-## Standalone Installation
-
-Clone the github repsoitory. If necessary change the ports and volume mounts in `docker-compose.yml`.  
+Clone the github repository. If necessary change the ports in the environment file `.env` and the volume mounts in `docker-compose.yml`.
 
 ```
 git clone https://github.com/bibbox/app-wordpress
 cd app-wordpress
-mkdir data
 docker-compose up -d
 ```
 
-The main app can be opened at 
-
+The main app can be opened and set up at
 ```
 http://localhost:8010
 ```
 
-## Docker Images Used
- * [wordpress](https://hub.docker.com/_/wordpress/), official wordpress container
- * [mariadb](https://hub.docker.com/_/mariadb/), offical mySQL container
- * [adminer](https://hub.docker.com/_/adminer/), db management tool
+## Install within BIBBOX
+
+Visit the BIBBOX page and find the App by its name in the Store. Click on the symbol and select Install. Then fill the parameters below and name your app click install again.
+
+## Docker Images used
+  - [wordpress](https://hub.docker.com/r/wordpress) 
+  - [adminer](https://hub.docker.com/r/adminer) 
+  - [mariadb](https://hub.docker.com/r/mariadb) 
+
+
  
 ## Install Environment Variables
-  * MYSQL_ROOT_PASSWORD = password, only used within the docker container
-  * MYSQL_USER = name of the mysql user, typical *wordpress*
-  * MYSQL_PASSWORD = mysql user password, only used within the docker container
+  - MYSQL_USER = username for the mysql-db account
+  - MYSQL_PASSWORD = Password of the mySQL database, only visible within the container
+  - MYSQL_ROOT_PASSWORD = Root password of the mySQL database, only visible within the container
 
+  
+The default values for the standalone installation are:
+  - MYSQL_USER = user
+  - MYSQL_PASSWORD = changethispasswordinproductionenvironments
+  - MYSQL_ROOT_PASSWORD = changethisrootpasswordinproductionenvironments
 
+  
+## Mounted Volumes
+### mariadb Conatiner
+  - *./database/mysql:/var/lib/mysql*

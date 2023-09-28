@@ -46,4 +46,10 @@ The default values for the standalone installation are:
 ## Mounted Volumes
 ### mariadb Conatiner
   - *./database/mysql:/var/lib/mysql*
+## Hints
 
+adminer static credentials:
+field | value
+------ | ------ 
+server | wordpress-db
+database | wordpress

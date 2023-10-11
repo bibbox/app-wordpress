@@ -7,5 +7,6 @@
 	"catalogue_url": "",
 	"application_url": "https://wordpress.org",
 	"tags": ["Content Management System", "Blog"],
-	"application_documentation_url": "https://codex.wordpress.org"
+	"application_documentation_url": "https://codex.wordpress.org",
+	"instance_information": "work in progress"
 }

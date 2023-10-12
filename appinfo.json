@@ -8,5 +8,5 @@
 	"application_url": "https://wordpress.org",
 	"tags": ["Content Management System", "Blog"],
 	"application_documentation_url": "https://codex.wordpress.org",
-	"instance_information": "work in progress"
+	"instance_information": "<p> Wordpress is a well-architected personal publishing system, which is built on PHP and MySQL, and licensed under the GPLv2. </p>"
 }
